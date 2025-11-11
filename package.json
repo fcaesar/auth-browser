@@ -9,7 +9,7 @@
   "files": [
     "dist/",
     "ios/Plugin/",
-    "CustomAuthBrowser.podspec"
+    "FcaesarAuthBrowser.podspec"
   ],
   "author": "Fredrik Caesar",
   "license": "MIT",
@@ -41,7 +41,7 @@
     "clean": "./node_modules/rimraf/bin.js ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build",
-    "publish:cocoapod": "pod trunk push CustomAuthBrowser.podspec --allow-warnings"
+    "publish:cocoapod": "pod trunk push FcaesarAuthBrowser.podspec --allow-warnings"
   },
   "devDependencies": {
     "@capacitor/android": "^7.4.4",
