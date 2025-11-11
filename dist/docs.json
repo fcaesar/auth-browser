@@ -1,0 +1,130 @@
+{
+  "api": {
+    "name": "AuthBrowserPlugin",
+    "slug": "authbrowserplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "start",
+        "signature": "(options: OpenOptions) => Promise<SuccessOrFailureResult>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "OpenOptions"
+          }
+        ],
+        "returns": "Promise<SuccessOrFailureResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "1.0.0"
+          }
+        ],
+        "docs": "iOS only: Open a page with the specified options.\n\nError on other platforms.",
+        "complexTypes": [
+          "SuccessOrFailureResult",
+          "OpenOptions"
+        ],
+        "slug": "start"
+      },
+      {
+        "name": "abort",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "1.0.0"
+          }
+        ],
+        "docs": "iOS only: Close an open browser window.\n\nError on other platforms.",
+        "complexTypes": [],
+        "slug": "abort"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "OpenOptions",
+      "slug": "openoptions",
+      "docs": "Represents the options passed to `open`.",
+      "tags": [
+        {
+          "text": "1.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "url",
+          "tags": [
+            {
+              "text": "1.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The URL to which the browser is opened.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "scheme",
+          "tags": [],
+          "docs": "The Scheme that the browser should listen to for to redirect back to the app.\nFor example if you want to use the scheme `myapp://` you would pass `myapp`.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [
+    {
+      "name": "SuccessOrFailureResult",
+      "slug": "successorfailureresult",
+      "docs": "",
+      "types": [
+        {
+          "text": "SuccessResult",
+          "complexTypes": [
+            "SuccessResult"
+          ]
+        },
+        {
+          "text": "FailureResult",
+          "complexTypes": [
+            "FailureResult"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SuccessResult",
+      "slug": "successresult",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  success: true;\n  url: string;\n}",
+          "complexTypes": []
+        }
+      ]
+    },
+    {
+      "name": "FailureResult",
+      "slug": "failureresult",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n    success: false;\n    error: string;\n}",
+          "complexTypes": []
+        }
+      ]
+    }
+  ],
+  "pluginConfigs": []
+}

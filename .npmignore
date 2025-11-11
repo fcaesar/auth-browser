@@ -1,0 +1,21 @@
+# Source files
+src/
+
+# Config files
+tsconfig.json
+rollup.config.js
+.gitignore
+.npmignore
+
+# Development
+node_modules/
+.vscode/
+.idea/
+
+# Docs
+*.md
+!README.md
+
+# Git
+.git/
+.gitattributes
